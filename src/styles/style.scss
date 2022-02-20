@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+@use "colors";
+@use "mixins";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font: {
+    family: "Spartan", sans-serif;
+    size: 12px;
+    weight: 500;
+  }
+}
+
+header {
+  margin: 72px auto;
+  width: 730px;
+  @include mixins.flex();
+}
