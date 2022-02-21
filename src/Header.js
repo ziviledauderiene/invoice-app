@@ -3,13 +3,14 @@ import React from "react";
 export const Header = () => {
   return (
     <header>
-      <div>
+      <div className="invoices">
         <h1>Invoices</h1>
         <p>There are {7} total invoices</p>
       </div>
 
+      <div className="buttons">
       <div className="dropdown">
-        <button>
+        <button className="filter-button">
           <p>Filter by status</p>
           <svg width="11" height="7" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -37,18 +38,17 @@ export const Header = () => {
         </div>
       </div>
 
-      <button>
-        <div>
-          <svg width="11" height="11" xmlns="http://www.w3.org/2000/svg">
+      <button className="new-invoice-button">
+          <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M6.313 10.023v-3.71h3.71v-2.58h-3.71V.023h-2.58v3.71H.023v2.58h3.71v3.71z"
               fill="#7C5DFA"
               fillRule="nonzero"
             />
           </svg>
-        </div>
         <p>New Invoice</p>
       </button>
+      </div>
     </header>
   );
 };

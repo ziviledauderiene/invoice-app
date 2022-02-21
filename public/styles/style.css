@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #F8F8FB;
+}
+
+#root {
+  display: grid;
+  grid-template-areas: "a h" "a m";
+}
+
+aside {
+  grid-area: a;
+  height: 800px;
+  width: 103px;
+  background-color: #373B53;
+}
+
+main {
+  grid-area: m;
+  width: 730px;
+}
+
+header {
+  grid-area: h;
+  margin: 72px 355px 72px 252px;
+  width: 730px;
+  height: 59px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+header h1 {
+  color: #0c0e16;
+  line-height: 36px;
+  margin: 0 0 8px 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+header .invoices p {
+  color: #7e88c3;
+  line-height: 15px;
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+}
+header .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+header button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  outline: none;
+  border: none;
+  font-family: "Spartan", sans-serif;
+}
+header .dropdown {
+  height: 80px;
+  margin-top: 65px;
+}
+header .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+  line-height: 15px;
+  padding: 24px;
+  margin-left: -20px;
+  top: 132px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 144px;
+  box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+}
+header .dropdown .dropdown-content div {
+  height: 15px;
+}
+header .dropdown .dropdown-content input {
+  width: 16px;
+  height: 16px;
+  margin: 0 16px 0 0;
+}
+header .dropdown .dropdown-content :nth-child(2) {
+  margin: 16px 0;
+}
+header .dropdown .filter-button {
+  background: none;
+  margin: 0 40px 0 0;
+}
+header .dropdown .filter-button p {
+  color: #0c0e16;
+  line-height: 15px;
+  margin: 0 16px 0 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+}
+header .dropdown:hover .dropdown-content {
+  display: block;
+}
+header .dropdown:hover .dropdown-content input,
+header .dropdown:hover .dropdown-content label {
+  cursor: pointer;
+}
+header .dropdown:hover svg {
+  transform: scaleY(-1);
+}
+header .dropdown:hover .filter-button {
+  cursor: pointer;
+}
+header .new-invoice-button {
+  background-color: #7c5dfa;
+  height: 48px;
+  width: 150px;
+  border-radius: 24px;
+  padding: 0;
+}
+header .new-invoice-button p {
+  line-height: 15px;
+  color: #ffffff;
+  margin-right: 15px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+}
+header .new-invoice-button svg {
+  padding: 11px;
+  margin: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+header .new-invoice-button:hover {
+  background-color: #9277ff;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
