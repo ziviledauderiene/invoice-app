@@ -13,6 +13,7 @@ body {
   }
   background-color: $background;
 }
+
 #root {
   display: grid;
   grid-template-areas: 
@@ -24,6 +25,44 @@ aside {
   height: 800px;
   width: 103px;
   background-color: $asideBackground;
+  border-radius: 0 20px 20px 0;
+  .logo {
+    width: 103px;
+    height: 103px;
+    background-color: $buttonPurple;
+    border-radius: 0 20px 20px 0;
+    .empty {
+      width: 103px;
+      height: 52px;
+      background-color: $buttonHoverPurple;
+      border-radius: 20px 0 20px 0;
+      margin-top: 51px;
+    }
+    svg {
+      transform: scale(1.42857);
+      position:absolute;
+      z-index: 1;
+      top: 34px;
+      left: 33.29px;
+    }
+  }
+  @include mixins.flex($direction: column);
+  .aside-bottom {
+    @include mixins.flex($direction: column);
+    svg {
+      margin-bottom: 31px;
+      :hover {
+        cursor: pointer;
+      }
+    }
+    .avatar {
+      padding: 31px; 
+      border-top: 1px solid $linePurple;
+      img {
+      border-radius: 50%;
+      }
+    }
+  }
 }
 main {
   grid-area: m;
@@ -78,8 +117,11 @@ header {
       input {
         width: 16px;
         height: 16px;
-        margin: 0 16px 0 0;
+        margin: 0 16px 0 0;        
       }
+      input:hover {
+          border-color: $buttonPurple;
+        }
       :nth-child(2) {
         margin: 16px 0;
       }
@@ -134,5 +176,35 @@ header {
   .new-invoice-button:hover {
     background-color: $buttonHoverPurple;
     cursor: pointer;
+  }
+}
+
+.dark-mode {
+  background-color: $darkBackground;
+  color: $white;
+
+  header {
+    .invoices{
+      h1 {
+    color: $white;
+    }
+    p {
+      color: $darktextPurple;
+    }
+    }
+    
+    .dropdown p {
+      color: $white;
+    }
+    .dropdown-content {
+    background-color: $darkBackgroundDropdown;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    input {
+      background-color: $darkBackgroundInvoice;
+    }
+    label {
+      color: $white;
+    }
+    }
   }
 }
