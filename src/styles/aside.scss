@@ -1,0 +1,44 @@
+aside {
+  grid-area: a;
+  height: 100%;
+  width: 103px;
+  background-color: $asideBackground;
+  border-radius: 0 20px 20px 0;
+  .logo {
+    width: 103px;
+    height: 103px;
+    background-color: $buttonPurple;
+    border-radius: 0 20px 20px 0;
+    .empty {
+      width: 103px;
+      height: 52px;
+      background-color: $buttonHoverPurple;
+      border-radius: 20px 0 20px 0;
+      margin-top: 51px;
+    }
+    svg {
+      transform: scale(1.42857);
+      position: absolute;
+      z-index: 1;
+      top: 34px;
+      left: 33.29px;
+    }
+  }
+  @include mixins.flex($direction: column);
+  .aside-bottom {
+    @include mixins.flex($direction: column);
+    svg {
+      margin-bottom: 31px;
+      :hover {
+        cursor: pointer;
+      }
+    }
+    .avatar {
+      padding: 31px;
+      border-top: 1px solid $linePurple;
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+}

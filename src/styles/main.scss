@@ -1,0 +1,8 @@
+main {
+  grid-area: m;
+  width: 1337px;
+  .main-content {
+    margin: 0 auto;
+    @include mixins.flex(column);
+  }
+}

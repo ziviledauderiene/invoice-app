@@ -4,16 +4,25 @@ $buttonHoverPurple: #9277ff;
 $textPurple: #7e88c3;
 $textBlack: #0c0e16;
 $white: #ffffff;
-$background: #F8F8FB;
+$background: #f8f8fb;
+$inputBackground: #DFE3FA;
 
 //Aside colors
-$asideBackground: #373B53;
-$linePurple: #494E6E;
+$asideBackground: #373b53;
+$linePurple: #494e6e;
+
+//Invoice list colors
+$paidButton: rgb(51, 214, 159, 0.06);
+$pendingButton: rgb(255, 143, 0, 0.06);
+$draftButton: rgb(55, 59, 83, 0.06);
+$paidButtonText: #33d69f;
+$pendingButtonText: #ff8f00;
+$draftButtonText: #373b53;
 
 //Dark mode colors
 $darkBackground: #141625;
 $darkBackgroundDropdown: #252945;
-$darkBackgroundInvoice: #1E2139;
-$darktextPurple: #DFE3FA;
-
-
+$darkBackgroundInvoice: #1e2139;
+$darktextPurple: #dfe3fa;
+$darkDraftButtonText: #DFE3FA;
+$darkDraftButton: rgb(223, 227, 250, 0.06);

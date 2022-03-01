@@ -5,11 +5,12 @@
   flex-direction: $direction;
 }
 
-@mixin font($weight: bold, $size: 12px, $spacing: -0.25px) {
+@mixin font($weight: bold, $size: 12px, $spacing: -0.25px, $height: 15px) {
   font: {
     style: normal;
     weight: $weight;
     size: $size;
   }
   letter-spacing: $spacing;
+  line-height: $height;
 }

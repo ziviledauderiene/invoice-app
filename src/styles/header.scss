@@ -1,0 +1,114 @@
+header {
+  grid-area: h;
+  width: 1337px;
+  .header-content {
+    margin: 72px auto 65px auto;
+    width: 730px;
+    height: 59px;
+    @include mixins.flex();
+    h1 {
+      color: $textBlack;
+      margin: 0 0 8px 0;
+      @include mixins.font($size: 32px, $spacing: -1px, $height: 36px);
+    }
+    .invoices p {
+      color: $textPurple;
+      margin: 0;
+      @include mixins.font($weight: 500);
+    }
+    .buttons {
+      @include mixins.flex();
+    }
+    button {
+      @include mixins.flex();
+      outline: none;
+      border: none;
+      font-family: "Spartan", sans-serif;
+    }
+    .dropdown {
+      height: 80px;
+      margin-top: 65px;
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        @include mixins.font();
+        padding: 24px;
+        margin-left: -20px;
+        top: 132px;
+        background-color: $white;
+        border-radius: 8px;
+        width: 144px;
+        box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+        div {
+          height: 15px;
+        }
+        input {
+          appearance: none;
+          width: 16px;
+          height: 16px;
+          margin: 0 16px 0 0;
+          background-color: $inputBackground;
+          border-radius: 2px;
+        }
+        input:hover {
+          border: 1px solid $buttonPurple;
+        }
+        input[type="checkbox"]:checked {
+          background-color: $buttonPurple;
+        }
+        :nth-child(2) {
+          margin: 16px 0;
+        }
+      }
+    }
+    .dropdown .filter-button {
+      background: none;
+      margin: 0 40px 0 0;
+      p {
+        color: $textBlack;
+        margin: 0 16px 0 0;
+        @include mixins.font();
+      }
+    }
+    .dropdown:hover {
+      .dropdown-content {
+        display: block;
+        input,
+        label {
+          cursor: pointer;
+        }
+      }
+      svg {
+        transform: scaleY(-1);
+      }
+      .filter-button {
+        cursor: pointer;
+      }
+    }
+
+    .new-invoice-button {
+      background-color: $buttonPurple;
+      height: 48px;
+      width: 150px;
+      border-radius: 24px;
+      padding: 0;
+
+      p {
+        color: $white;
+        margin-right: 15px;
+        @include mixins.font();
+      }
+      svg {
+        padding: 11px;
+        margin: 8px;
+        background-color: $white;
+        border-radius: 50%;
+      }
+    }
+    .new-invoice-button:hover {
+      background-color: $buttonHoverPurple;
+      cursor: pointer;
+    }
+  }
+}

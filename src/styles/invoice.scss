@@ -1,0 +1,67 @@
+.invoice {
+  @include mixins.flex($justify: flex-start);
+  background-color: $white;
+  border-radius: 8px;
+  width: 730px;
+  height: 72px;
+  margin-bottom: 16px;
+
+  .invoice-id {
+    text-transform: uppercase;
+    padding-left: 32px;
+    width: 135px;
+    @include mixins.font();
+    color: $textBlack;
+    span {
+      color: $textPurple;
+    }
+  }
+  .due-date {
+    width: 151px;
+  }
+  .client-name {
+    width: 132px;
+  }
+  .due-date,
+  .client-name {
+    color: $textPurple;
+    @include mixins.font($weight: 500, $size: 12px);
+  }
+  .invoice-total {
+    @include mixins.font($size: 16px);
+    width: 120px;
+    text-align: right;
+    color: $textBlack;
+  }
+  .status-button {
+    @include mixins.font($size: 12px);
+
+    .paid {
+      background-color: $paidButton;
+      color: $paidButtonText;
+    }
+    .pending {
+      background-color: $pendingButton;
+      color: $pendingButtonText;
+    }
+    .draft {
+      background-color: $draftButton;
+      color: $draftButtonText;
+    }
+    .paid,
+    .pending,
+    .draft {
+      @include mixins.flex($justify: center);
+      width: 104px;
+      height: 40px;
+      border-radius: 6px;
+      margin-left: 40px;
+      svg {
+        margin-right: 8px;
+      }
+    }
+  }
+  > svg {
+    margin: 0 24px 0 20px;
+  }
+}
