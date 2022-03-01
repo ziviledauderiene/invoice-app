@@ -55,7 +55,12 @@ header {
           border: 1px solid $buttonPurple;
         }
         input[type="checkbox"]:checked {
-          background-color: $buttonPurple;
+          background: {
+            color: $buttonPurple;
+            image: url("../assets/icon-check.svg");
+            repeat: no-repeat;
+            position: center;
+          }
         }
         :nth-child(2) {
           margin: 16px 0;
